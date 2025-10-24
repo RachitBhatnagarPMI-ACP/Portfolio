@@ -1,186 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rachit Bhatnagar | Professional Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-  /* Reset & Base */
-  * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', sans-serif; }
-  body { background:#f5f5f5; color:#333; line-height:1.6; }
-
-  /* Container */
-  .container { width:90%; max-width:1200px; margin:0 auto; }
-
-  /* Hero Section */
-  .hero { background:#ffffff; padding:80px 20px; text-align:center; position:relative; }
-  .hero img { width:180px; height:180px; border-radius:50%; object-fit:cover; border:5px solid #0078D4; }
-  .hero h1 { font-size:3em; margin:20px 0 10px; color:#0078D4; }
-  .hero p { font-size:1.2em; color:#555; max-width:600px; margin:0 auto 20px; }
-  .hero a { display:inline-block; padding:12px 25px; background:#0078D4; color:#fff; text-decoration:none; border-radius:5px; transition:0.3s; }
-  .hero a:hover { background:#005a9e; }
-
-  /* Section Headings */
-  section h2 { font-size:2em; margin-bottom:20px; color:#0078D4; text-align:center; }
-
-  /* About Section */
-  .about { background:#fff; padding:60px 20px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.05); margin-bottom:40px; }
-  .about p { max-width:800px; margin:0 auto; font-size:1.1em; color:#555; }
-
-  /* Experience Timeline */
-  .timeline { position:relative; margin:40px 0; }
-  .timeline::before { content:""; position:absolute; left:50%; top:0; transform:translateX(-50%); width:4px; height:100%; background:#0078D4; }
-  .timeline-item { position:relative; width:50%; padding:20px 40px; }
-  .timeline-item.left { left:0; text-align:right; }
-  .timeline-item.right { left:50%; }
-  .timeline-item::before { content:""; position:absolute; top:20px; width:20px; height:20px; border-radius:50%; background:#fff; border:4px solid #0078D4; }
-  .timeline-item.left::before { right:-12px; }
-  .timeline-item.right::before { left:-12px; }
-  .timeline-item h3 { margin-bottom:5px; color:#0078D4; }
-  .timeline-item span { font-size:0.9em; color:#555; }
-
-  /* Projects Grid */
-  .projects { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; margin-bottom:40px; }
-  .project-card { background:#fff; border-radius:10px; padding:20px; box-shadow:0 4px 12px rgba(0,0,0,0.05); transition:0.3s; }
-  .project-card:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.1); }
-  .project-card h3 { color:#0078D4; margin-bottom:10px; }
-
-  /* Certifications */
-  .certifications { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-bottom:40px; }
-  .cert-card { background:#fff; border-radius:10px; padding:15px 25px; box-shadow:0 4px 12px rgba(0,0,0,0.05); color:#0078D4; font-weight:600; }
-
-  /* Skills */
-  .skills { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:20px; margin-bottom:40px; }
-  .skill { background:#fff; padding:15px 20px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.05); }
-  .skill h4 { margin-bottom:10px; color:#0078D4; }
-  .skill-bar { width:100%; height:10px; background:#e0e0e0; border-radius:5px; overflow:hidden; }
-  .skill-bar-inner { height:100%; background:#0078D4; width:0%; border-radius:5px; transition:1s; }
-
-  /* Contact */
-  .contact { background:#fff; padding:60px 20px; border-radius:10px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.05); margin-bottom:40px; }
-  .contact a { display:inline-block; margin:10px; padding:12px 25px; background:#0078D4; color:#fff; text-decoration:none; border-radius:5px; transition:0.3s; }
-  .contact a:hover { background:#005a9e; }
-
-  /* Footer */
-  footer { text-align:center; padding:20px; color:#777; font-size:0.9em; }
-
-  /* Animations */
-  .fade-in { opacity:0; transform:translateY(20px); transition:1s ease; }
-  .fade-in.visible { opacity:1; transform:translateY(0); }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rachit Bhatnagar - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header class="hero">
+        <div class="container">
+            <img src="rachit.jpg" alt="Rachit Bhatnagar" class="profile-img">
+            <h1>Rachit Bhatnagar</h1>
+            <p>Microsoft Power Platform Solution Architect | PMI-ACP</p>
+            <a href="https://www.linkedin.com/in/rachitbhatnagar-pmi-acp/" class="cta">Connect on LinkedIn</a>
+        </div>
+    </header>
 
-<!-- Hero -->
-<section class="hero">
-  <img src="https://media.licdn.com/dms/image/D4D03AQE0AJx3xcheZA/profile-displayphoto-shrink_200_200/0/1686478551238?e=1762992000&v=beta&t=ZbCWJIoFB_Tm9uuvaAiDY4R2T8PA2-Uqkh9UD3Dv7L4" alt="Rachit Bhatnagar">
-  <h1>Rachit Bhatnagar</h1>
-  <p>Microsoft Power Platform Solution Architect | PMI-ACP | Driving innovation, strategy, and impactful solutions</p>
-  <a href="https://www.linkedin.com/in/rachitbhatnagar-pmi-acp/" target="_blank">View LinkedIn</a>
-</section>
+    <section class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Passionate about building innovative solutions with Microsoft Power Platform...</p>
+        </div>
+    </section>
 
-<div class="container">
+    <section class="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <!-- Timeline items will go here -->
+        </div>
+    </section>
 
-  <!-- About -->
-  <section class="about fade-in">
-    <h2>About Me</h2>
-    <p>Passionate about building innovative solutions with Microsoft Power Platform. Experienced in leading cross-functional teams, driving business strategy, and delivering measurable results. Skilled in Power Apps, Power Automate, Dataverse, AI integrations, and agile methodologies.</p>
-  </section>
+    <section class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <!-- Project cards will go here -->
+        </div>
+    </section>
 
-  <!-- Experience -->
-  <section class="timeline fade-in">
-    <h2>Experience</h2>
-    <div class="timeline-item left">
-      <h3>Microsoft Power Platform Solution Architect</h3>
-      <span>Company XYZ | 2024 - Present</span>
-      <p>Leading enterprise-level Power Platform implementations, governance, and architecture strategy.</p>
-    </div>
-    <div class="timeline-item right">
-      <h3>Senior Power Platform Consultant</h3>
-      <span>Company ABC | 2022 - 2024</span>
-      <p>Delivered high-impact solutions across multiple business units with automation and analytics.</p>
-    </div>
-    <div class="timeline-item left">
-      <h3>Power Platform Developer</h3>
-      <span>Company DEF | 2020 - 2022</span>
-      <p>Designed and implemented apps, flows, and dashboards to improve operational efficiency.</p>
-    </div>
-  </section>
+    <section class="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <!-- Skill bars or icons will go here -->
+        </div>
+    </section>
 
-  <!-- Projects -->
-  <section class="projects fade-in">
-    <h2>Projects & Achievements</h2>
-    <div class="project-card">
-      <h3>Workflow Automation Framework</h3>
-      <p>Developed a reusable framework for automating business processes across departments.</p>
-    </div>
-    <div class="project-card">
-      <h3>Enterprise Governance App</h3>
-      <p>Implemented a solution to monitor compliance and governance across Power Platform apps.</p>
-    </div>
-    <div class="project-card">
-      <h3>Data Integration Dashboard</h3>
-      <p>Built a comprehensive analytics dashboard integrating multiple data sources for decision-making.</p>
-    </div>
-  </section>
+    <section class="certifications">
+        <div class="container">
+            <h2>Certifications</h2>
+            <!-- Certification logos will go here -->
+        </div>
+    </section>
 
-  <!-- Certifications -->
-  <section class="certifications fade-in">
-    <h2>Certifications</h2>
-    <div class="cert-card">PL-600: Power Platform Solution Architect</div>
-    <div class="cert-card">PMI-ACP: Agile Certified Practitioner</div>
-    <div class="cert-card">PL-200: Power Platform Functional Consultant</div>
-  </section>
+    <section class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:rachit@example.com">rachit@example.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/rachitbhatnagar-pmi-acp/">View Profile</a></p>
+        </div>
+    </section>
 
-  <!-- Skills -->
-  <section class="skills fade-in">
-    <h2>Skills</h2>
-    <div class="skill">
-      <h4>Power Apps</h4>
-      <div class="skill-bar"><div class="skill-bar-inner" style="width:90%"></div></div>
-    </div>
-    <div class="skill">
-      <h4>Power Automate</h4>
-      <div class="skill-bar"><div class="skill-bar-inner" style="width:85%"></div></div>
-    </div>
-    <div class="skill">
-      <h4>Dataverse & Data Modeling</h4>
-      <div class="skill-bar"><div class="skill-bar-inner" style="width:80%"></div></div>
-    </div>
-    <div class="skill">
-      <h4>Agile & Project Management</h4>
-      <div class="skill-bar"><div class="skill-bar-inner" style="width:90%"></div></div>
-    </div>
-  </section>
+    <footer>
+        <p>&copy; 2025 Rachit Bhatnagar</p>
+    </footer>
 
-  <!-- Contact -->
-  <section class="contact fade-in">
-    <h2>Contact Me</h2>
-    <a href="mailto:rachit@example.com">Email Me</a>
-    <a href="https://www.linkedin.com/in/rachitbhatnagar-pmi-acp/" target="_blank">LinkedIn</a>
-  </section>
-
-</div>
-
-<!-- Footer -->
-<footer>
-  &copy; 2025 Rachit Bhatnagar | All Rights Reserved
-</footer>
-
-<script>
-  // Fade-in on scroll
-  const faders = document.querySelectorAll('.fade-in');
-  const appearOptions = { threshold: 0.3, rootMargin: "0px 0px -50px 0px" };
-  const appearOnScroll = new IntersectionObserver(function(entries, observer){
-    entries.forEach(entry => {
-      if(!entry.isIntersecting) return;
-      entry.classList.add('visible');
-      observer.unobserve(entry);
-    });
-  }, appearOptions);
-  faders.forEach(fader => { appearOnScroll.observe(fader); });
-</script>
-
+    <script src="main.js"></script>
 </body>
 </html>
