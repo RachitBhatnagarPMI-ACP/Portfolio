@@ -1,116 +1,65 @@
-/* General Styles */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Reset and base styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f3f2f1;
-    color: #323130;
+    box-sizing: border-box;
 }
-
-h1, h2, h3 {
-    color: #0078d4;
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 /* Hero Section */
 .hero {
-    background-color: #ffffff;
+    background: linear-gradient(135deg, #0078D4, #00B0F0);
+    color: white;
     text-align: center;
-    padding: 50px 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 80px 20px;
 }
-
-.hero .profile-pic {
+.hero .profile-img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    border: 5px solid white;
     margin-bottom: 20px;
 }
-
-.hero .btn-primary {
-    background-color: #0078d4;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
-
-/* About Section */
-.about {
-    padding: 40px 20px;
-    background-color: #ffffff;
-    margin: 20px 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Projects Section */
-.projects {
-    padding: 40px 20px;
-    background-color: #ffffff;
-    margin: 20px 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.project-cards {
-    display: flex;
-    justify-content: space-around;
-}
-
-.card {
-    background-color: #ffffff;
-    padding: 20px;
-    width: 30%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.card .btn-secondary {
-    background-color: #0078d4;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-/* Certifications Section */
-.certifications {
-    padding: 40px 20px;
-    background-color: #ffffff;
-    margin: 20px 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Skills Section */
-.skills {
-    padding: 40px 20px;
-    background-color: #ffffff;
-    margin: 20px 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Testimonials Section */
-.testimonials {
-    padding: 40px 20px;
-    background-color: #ffffff;
-    margin: 20px 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial {
+.hero p {
+    font-size: 1.2rem;
     margin-bottom: 20px;
 }
+.hero .cta {
+    background-color: white;
+    color: #0078D4;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
 
-/* Contact Section */
-.contact {
-    padding: 40px 20px;
-    background-color: #ffffff;
-    margin: 20px 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+/* Section Styles */
+section {
+    padding: 60px 20px;
+}
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #0078D4;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
 
 /* Footer */
 footer {
-    background-color: #0078d4;
-    color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
+    background-color: #333;
+    color: white;
 }
