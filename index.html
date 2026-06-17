@@ -1,0 +1,2317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Rachit Bhatnagar">
+  <meta name="description" content="Rachit Bhatnagar — Solutions Engineering Technical Lead & Power Platform Specialist.">
+  <meta name="keywords" content="Power Platform, Power Apps, Power Automate, Power BI, Microsoft, PMI-ACP, Forvis Mazars, Automation, Azure DevOps, AI Builder, CoPilot Studio, AI Agents">
+  <meta property="og:title" content="Rachit Bhatnagar — Power Platform & Automation">
+  <meta property="og:description" content="Solutions Engineering Technical Lead at Forvis Mazars UK — Power Platform.">
+  <meta property="og:type" content="website">
+  <title>Rachit Bhatnagar, PMI-ACP® | Power Platform Specialist</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root {
+      --bg: #050816;
+      --bg-2: #07101f;
+      --bg-card: rgba(10, 18, 35, 0.72);
+      --bg-surface: rgba(16, 25, 47, 0.82);
+      --text-1: #f4f7fb;
+      --text-2: rgba(244, 247, 251, 0.72);
+      --text-3: rgba(244, 247, 251, 0.38);
+
+      --blue: #5ac8ff;
+      --blue-2: #2b7fff;
+      --purple: #a78bfa;
+      --purple-2: #7c3aed;
+      --teal: #34d399;
+      --gold: #fbbf24;
+      --coral: #fb7185;
+
+      --grad-primary: linear-gradient(135deg, #5ac8ff 0%, #7c3aed 55%, #fb7185 100%);
+      --grad-text: linear-gradient(135deg, #8be9ff 0%, #a78bfa 50%, #f472b6 100%);
+      --grad-soft: linear-gradient(180deg, rgba(90,200,255,.14), rgba(124,58,237,.08));
+      --grad-panel: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+
+      --border: rgba(255,255,255,0.08);
+      --border-strong: rgba(90,200,255,0.22);
+      --shadow-lg: 0 30px 80px rgba(0,0,0,.45);
+      --shadow-md: 0 14px 40px rgba(0,0,0,.30);
+      --shadow-glow: 0 0 0 1px rgba(90,200,255,.08), 0 0 50px rgba(90,200,255,.12);
+
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --radius-sm: 12px;
+      --radius-xs: 10px;
+
+      --font-d: 'Outfit', sans-serif;
+      --font-b: 'Inter', sans-serif;
+      --nav-h: 76px;
+      --section-pad: 30px;
+      --container: 1180px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-b);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(90,200,255,.11), transparent 24%),
+        radial-gradient(circle at 85% 15%, rgba(167,139,250,.10), transparent 22%),
+        radial-gradient(circle at 75% 85%, rgba(251,113,133,.08), transparent 24%),
+        linear-gradient(180deg, #03060f 0%, #050816 45%, #060b15 100%);
+      color: var(--text-1);
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    body::before {
+      content: '';
+      position: fixed; inset: 0; pointer-events: none; z-index: 0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(90,200,255,.06), transparent 18%),
+        radial-gradient(circle at 80% 30%, rgba(167,139,250,.06), transparent 18%),
+        radial-gradient(circle at 50% 75%, rgba(34,211,238,.05), transparent 22%);
+      filter: blur(10px);
+      animation: floatBg 18s ease-in-out infinite alternate;
+    }
+    body::after {
+      content: '';
+      position: fixed; inset: 0; pointer-events: none; z-index: 0;
+      background-image: linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+      background-size: 52px 52px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.55), transparent 70%);
+      opacity: .35;
+    }
+    @keyframes floatBg {
+      from { transform: translate3d(0,0,0) scale(1); }
+      to { transform: translate3d(0,-18px,0) scale(1.05); }
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    ul { list-style: none; }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    section { padding: var(--section-pad) 0; position: relative; }
+
+    #about, #ai, #skills, #experience, #projects, #certifications, #awards, #highlights,
+#contact{
+    scroll-margin-top: 70px;
+}
+    #home { padding-top: calc(var(--nav-h) + 16px); min-height: 80vh; display: flex; align-items: center; }
+
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 2.8px;
+      text-transform: uppercase;
+      color: rgba(139, 233, 255, .9);
+      margin-bottom: 14px;
+    }
+    .section-eyebrow::before {
+      content: '';
+      width: 26px;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--grad-primary);
+      box-shadow: 0 0 24px rgba(90,200,255,.45);
+    }
+
+
+.award-year {
+    margin-left: 6px;
+    padding: 2px 8px;
+
+    border-radius: 999px;
+    background: rgba(255,215,0,.18);
+
+    font-size: .8rem;
+    font-weight: 800;
+}
+
+    
+    .section-title {
+      font-family: var(--font-d);
+      font-size: clamp(32px, 4.2vw, 58px);
+      font-weight: 900;
+      letter-spacing: -2px;
+      line-height: 1.02;
+      margin-bottom: 14px;
+    }
+
+    .section-desc {
+      font-size: 17px;
+      color: var(--text-2);
+      max-width: 1060px;
+      line-height: 1.8;
+      margin-bottom: 52px;
+    }
+
+    .grad-text {
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .grad-divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(90,200,255,.18), rgba(167,139,250,.18), transparent);
+      position: relative;
+      z-index: 1;
+    }
+
+    .tag-chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .4px;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+    .chip-gold, .chip-blue, .chip-green, .chip-teal, .chip-purple {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.04);
+    }
+    .chip-gold { color: #ffd36e; box-shadow: inset 0 0 0 1px rgba(251,191,36,.14); }
+    .chip-blue { color: #8bdcff; box-shadow: inset 0 0 0 1px rgba(90,200,255,.14); }
+    .chip-green { color: #78f0c0; box-shadow: inset 0 0 0 1px rgba(52,211,153,.14); }
+    .chip-teal { color: #82f0ea; box-shadow: inset 0 0 0 1px rgba(34,211,238,.14); }
+    .chip-purple { color: #d3b7ff; box-shadow: inset 0 0 0 1px rgba(167,139,250,.14); }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      z-index: 1000;
+      background: rgba(5,8,22,.52);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 12px;
+      text-decoration: none;
+    }
+    .logo-mark {
+      width: 42px; height: 42px;
+      border-radius: 14px;
+      background: var(--grad-primary);
+      color: white;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-d);
+      font-weight: 900;
+      letter-spacing: -1px;
+      box-shadow: 0 16px 30px rgba(90,200,255,.18), inset 0 1px 0 rgba(255,255,255,.18);
+    }
+    .logo-name {
+      font-family: var(--font-d);
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text-1);
+      line-height: 1.1;
+    }
+    .logo-tag { font-size: 11px; color: var(--text-2); margin-top: 2px; }
+
+    .nav-links { display: flex; gap: 4px; }
+    .nav-links a {
+      display: block;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-2);
+      transition: transform .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--text-1);
+      background: rgba(255,255,255,.06);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+      transform: translateY(-1px);
+    }
+    .nav-cta a {
+      padding: 11px 20px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      background: var(--grad-primary);
+      color: white;
+      box-shadow: 0 14px 30px rgba(90,200,255,.22);
+      transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+    }
+    .nav-cta a:hover { transform: translateY(-2px); box-shadow: 0 18px 34px rgba(90,200,255,.28); opacity: .98; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 10px;
+      border: none;
+      background: rgba(255,255,255,.05);
+      border-radius: 12px;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text-1);
+      border-radius: 999px;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      z-index: 999;
+      padding: 16px 20px 24px;
+      background: rgba(5,8,22,.92);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+    }
+    .mobile-nav.open { display: block; }
+    .mobile-nav ul { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .mobile-nav a {
+      display: block;
+      padding: 14px 14px;
+      border-radius: 14px;
+      color: var(--text-1);
+      font-weight: 600;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.06);
+    }
+    .mobile-nav-cta {
+      margin-top: 14px;
+      display: block;
+      text-align: center;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: var(--grad-primary);
+      color: #fff !important;
+      font-weight: 700;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.25fr .9fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(90,200,255,.18);
+      background: rgba(255,255,255,.04);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.02);
+      color: rgba(139,233,255,.95);
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 28px;
+      backdrop-filter: blur(16px);
+    }
+    .pulse-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: #74e2ff;
+      box-shadow: 0 0 0 0 rgba(116,226,255,.5);
+      animation: pulse 2.2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(116,226,255,.45); }
+      70% { box-shadow: 0 0 0 12px rgba(116,226,255,0); }
+      100% { box-shadow: 0 0 0 0 rgba(116,226,255,0); }
+    }
+
+    .hero-h1 {
+      font-family: var(--font-d);
+      font-size: clamp(44px, 6vw, 82px);
+      font-weight: 900;
+      line-height: .98;
+      letter-spacing: -3.2px;
+      margin-bottom: 24px;
+      text-wrap: balance;
+      max-width: 10ch;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: var(--text-2);
+      max-width: 620px;
+      line-height: 1.82;
+      margin-bottom: 36px;
+    }
+    .hero-sub strong { color: var(--text-1); font-weight: 600; }
+
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .btn-primary,
+    .btn-ghost{
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease, opacity .2s ease;
+      will-change: transform;
+    }
+
+    .btn-primary {
+      padding: 15px 24px;
+      color: #fff;
+      background: var(--grad-primary);
+      box-shadow: 0 16px 34px rgba(90,200,255,.18);
+    }
+    .btn-primary:hover{ transform: translateY(-2px); box-shadow: 0 22px 38px rgba(90,200,255,.24); }
+    
+    .btn-ghost {
+      padding: 15px 24px;
+      color: var(--text-1);
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(18px);
+    }
+    .btn-ghost:hover {
+      transform: translateY(-2px);
+      border-color: rgba(90,200,255,.25);
+      background: rgba(90,200,255,.08);
+    }
+
+.btn-linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  padding: 15px 24px;
+  border-radius: 999px;
+
+  font-weight: 700;
+  color: #ffffff;
+
+  background: #0A66C2;
+  border: 1px solid #0A66C2;
+
+  transition: transform .2s ease,
+              box-shadow .2s ease,
+              background .2s ease;
+}
+
+.btn-linkedin:hover {
+  background: #0A66C2;
+  border-color: #004182;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 18px 34px rgba(10, 102, 194, .35);
+}
+
+    
+    .hero-photo-col { position: relative; display: flex; justify-content: center; }
+    .hero-photo-glow {
+      position: absolute; inset: -40px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(90,200,255,.22), rgba(124,58,237,.12), transparent 72%);
+      filter: blur(18px);
+      animation: breathe 6s ease-in-out infinite;
+    }
+    @keyframes breathe {
+      0%,100% { transform: scale(1); opacity: .78; }
+      50% { transform: scale(1.06); opacity: 1; }
+    }
+    .hero-photo-frame {
+      position: relative;
+      z-index: 1;
+      width: 290px; height: 350px;
+      border-radius: 32px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
+      box-shadow: var(--shadow-lg), 0 0 0 1px rgba(90,200,255,.06);
+      transform: translateY(0);
+    }
+    .hero-photo-frame::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(5,8,22,.45) 100%);
+      pointer-events: none;
+    }
+    .hero-photo-frame img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      filter: saturate(1.06) contrast(1.03);
+    }
+    .hero-badge-row {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+      margin-top: 0px;
+    }
+    .h-badge {
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .4px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.04);
+      backdrop-filter: blur(14px);
+    }
+    .h-badge-gold { color: #ffd36e; box-shadow: inset 0 0 0 1px rgba(251,191,36,.16); }
+    .h-badge-blue { color: #8bdcff; box-shadow: inset 0 0 0 1px rgba(90,200,255,.16); }
+    .h-badge-teal { color: #73f0c4; box-shadow: inset 0 0 0 1px rgba(52,211,153,.16); }
+    .h-badge-purple { color: #d6b7ff; box-shadow: inset 0 0 0 1px rgba(167,139,250,.16); }
+
+    .stats-strip { padding: 0 0 92px; }
+    .stats-wrap {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius-xl);
+      background: rgba(255,255,255,.045);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    .stat-item {
+      padding: 28px 16px;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,.08);
+      transition: background .2s ease, transform .2s ease;
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-item:hover { background: rgba(255,255,255,.05); transform: translateY(-2px); }
+    .stat-num {
+      font-family: var(--font-d);
+      font-size: 34px;
+      font-weight: 900;
+      line-height: 1;
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 7px;
+    }
+    .stat-label {
+      font-size: 10.5px;
+      color: var(--text-2);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    #about, #skills, #certifications, #highlights, #goals {
+      background: linear-gradient(180deg, rgba(255,255,255,.015), rgba(255,255,255,.04));
+    }
+    .award-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+    .about-grid { display: grid; grid-template-columns: 1.2fr .95fr; gap: 44px; align-items: start; }
+    .about-lead {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text-1);
+      line-height: 1.65;
+      margin-bottom: 18px;
+      text-wrap: balance;
+    }
+    .about-body p {
+      font-size: 15.5px;
+      color: var(--text-2);
+      line-height: 1.9;
+      margin-bottom: 16px;
+    }
+    .about-body strong { color: var(--text-1); font-weight: 600; }
+
+    .about-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .hl-card {
+      padding: 20px 20px 18px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.04);
+      backdrop-filter: blur(14px);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
+      transition: transform .22s ease, border-color .22s ease, background .22s ease;
+    }
+    .hl-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(90,200,255,.24);
+      background: rgba(255,255,255,.06);
+    }
+    .hl-card h4 {
+      font-family: var(--font-d);
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: var(--text-1);
+    }
+    .hl-card p { font-size: 12.8px; color: var(--text-2); line-height: 1.7; }
+
+    #ai {
+      background:
+        radial-gradient(circle at 80% 20%, rgba(90,200,255,.15), transparent 25%),
+        radial-gradient(circle at 15% 70%, rgba(167,139,250,.14), transparent 28%),
+        linear-gradient(180deg, #050816 0%, #050714 100%);
+      overflow: hidden;
+    }
+    #ai::before {
+      content: '';
+      position: absolute; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(circle at 70% 35%, rgba(90,200,255,.16), transparent 32%),
+        radial-gradient(circle at 30% 75%, rgba(124,58,237,.11), transparent 28%);
+    }
+    #ai::after {
+      content: '';
+      position: absolute;
+      top: -220px; right: -220px;
+      width: 640px; height: 640px;
+      border-radius: 50%;
+      border: 1px solid rgba(90,200,255,.08);
+      pointer-events: none;
+      opacity: .6;
+    }
+    #ai .section-eyebrow { color: rgba(120, 255, 236, .92); }
+    #ai .section-eyebrow::before { background: linear-gradient(135deg, #34d399, #5ac8ff); }
+    #ai .section-desc { color: rgba(244,247,251,.7); }
+
+    .ai-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      position: relative;
+      z-index: 1;
+    }
+    .ai-card, .skill-group, .proj-card, .cert-card, .award-card, .event-card, .goal-card, .tl-card, .contact-item, .stat-item {
+      border-radius: var(--radius-lg);
+    }
+    .ai-card {
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.09);
+      backdrop-filter: blur(18px);
+      padding: 28px 24px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
+      transition: transform .22s ease, border-color .22s ease, background .22s ease, box-shadow .22s ease;
+    }
+    .ai-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(90,200,255,.24);
+      background: rgba(255,255,255,.065);
+      box-shadow: var(--shadow-md), 0 0 0 1px rgba(90,200,255,.05);
+    }
+    .ai-card.blue { border-top: 2px solid var(--blue); }
+    .ai-card.teal { border-top: 2px solid var(--teal); }
+    .ai-card.purple { border-top: 2px solid var(--purple); }
+    .ai-card.gold { border-top: 2px solid var(--gold); }
+    .ai-icon {
+      width: 56px; height: 56px;
+      border-radius: 18px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.55rem;
+      margin-bottom: 18px;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .ai-icon.blue { background: rgba(90,200,255,.14); }
+    .ai-icon.teal { background: rgba(52,211,153,.14); }
+    .ai-icon.purple { background: rgba(167,139,250,.14); }
+    .ai-icon.gold { background: rgba(251,191,36,.14); }
+    .ai-card h3 {
+      font-family: var(--font-d);
+      font-size: 17px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: var(--text-1);
+    }
+    .ai-card p { font-size: 13.8px; color: var(--text-2); line-height: 1.75; }
+    .ai-footer-note {
+      margin-top: 26px;
+      padding: 16px 18px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(90,200,255,.14);
+      background: rgba(90,200,255,.05);
+      color: rgba(244,247,251,.68);
+      backdrop-filter: blur(16px);
+    }
+    .ai-footer-note strong { color: #8bdcff; }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .skill-group {
+      padding: 26px 24px;
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(18px);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
+      transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+    }
+    .skill-group:hover {
+      transform: translateY(-4px);
+      border-color: rgba(90,200,255,.20);
+      box-shadow: var(--shadow-md);
+    }
+    .skill-group-icon { font-size: 28px; margin-bottom: 12px; }
+    .skill-group h3 {
+      font-family: var(--font-d);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .7px;
+      text-transform: uppercase;
+      color: #8bdcff;
+      margin-bottom: 16px;
+    }
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill {
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.04);
+      color: var(--text-2);
+      transition: transform .18s ease, border-color .18s ease, color .18s ease, background .18s ease;
+    }
+    .pill:hover {
+      transform: translateY(-2px);
+      border-color: rgba(90,200,255,.28);
+      color: var(--text-1);
+      background: rgba(90,200,255,.08);
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 40px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 12px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(90,200,255,.9), rgba(167,139,250,.5), transparent);
+      opacity: .45;
+    }
+    .tl-item { position: relative; margin-bottom: 28px; }
+    .tl-dot {
+      position: absolute;
+      left: -34px;
+      top: 22px;
+      width: 16px; height: 16px;
+      border-radius: 50%;
+      background: var(--grad-primary);
+      border: 3px solid #050816;
+      box-shadow: 0 0 0 6px rgba(90,200,255,.08);
+    }
+    .tl-card {
+      padding: 28px 28px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.045);
+      backdrop-filter: blur(16px);
+      box-shadow: var(--shadow-md);
+      transition: transform .22s ease, border-color .22s ease, background .22s ease;
+    }
+    .tl-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(90,200,255,.2);
+      background: rgba(255,255,255,.06);
+    }
+    .tl-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 4px;
+    }
+    .tl-title {
+      font-family: var(--font-d);
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--text-1);
+    }
+    .tl-date {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #8bdcff;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(90,200,255,.16);
+      background: rgba(90,200,255,.07);
+      white-space: nowrap;
+    }
+    .tl-company {
+      font-size: 13.5px;
+      color: var(--text-2);
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+    .tl-bullets {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .tl-bullets li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.72;
+    }
+    .tl-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 10px;
+      width: 10px; height: 2px;
+      border-radius: 999px;
+      background: var(--grad-primary);
+    }
+    .tl-bullets li strong { color: var(--text-1); font-weight: 600; }
+
+    .proj-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .proj-card {
+      padding: 26px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.045);
+      backdrop-filter: blur(16px);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
+      position: relative;
+      overflow: hidden;
+      transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease, background .22s ease;
+      display: flex; flex-direction: column;
+      min-height: 235px;
+    }
+    .proj-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(90,200,255,.08), transparent 28%);
+      pointer-events: none;
+    }
+    .proj-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--grad-primary);
+      opacity: 0;
+      transition: opacity .24s ease;
+    }
+    .proj-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(90,200,255,.24);
+      box-shadow: var(--shadow-lg);
+      background: rgba(255,255,255,.06);
+    }
+    .proj-card:hover::after { opacity: 1; }
+    .proj-badge-wrap { margin-bottom: 14px; position: relative; z-index: 1; }
+    .badge-award, .badge-global, .badge-governance, .badge-ai, .badge-training {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .2px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.05);
+      backdrop-filter: blur(12px);
+    }
+    .badge-award { color: #ffd36e; }
+    .badge-global { color: #78f0e2; }
+    .badge-governance { color: #d6b7ff; }
+    .badge-ai { color: #8bdcff; }
+    .badge-training { color: #87f0c9; }
+    .proj-tech {
+      display: inline-block;
+      margin-bottom: 12px;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #c9d2ff;
+      letter-spacing: .2px;
+      position: relative; z-index: 1;
+    }
+    .proj-card h3 {
+      font-family: var(--font-d);
+      font-size: 17px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: var(--text-1);
+      line-height: 1.34;
+      position: relative; z-index: 1;
+    }
+    .proj-card p {
+      font-size: 13.8px;
+      color: var(--text-2);
+      line-height: 1.75;
+      flex: 1;
+      position: relative; z-index: 1;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .cert-card {
+      padding: 20px 20px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.045);
+      backdrop-filter: blur(16px);
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .cert-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(90,200,255,.22);
+      background: rgba(255,255,255,.06);
+    }
+    .cert-icon {
+      width: 46px; height: 46px;
+      border-radius: 14px;
+      background: var(--grad-primary);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 900; color: #fff;
+      flex-shrink: 0;
+      box-shadow: 0 12px 24px rgba(90,200,255,.12);
+    }
+    .cert-body h4 {
+      font-family: var(--font-d);
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 4px;
+      color: var(--text-1);
+      line-height: 1.32;
+    }
+    .cert-body span { font-size: 12px; color: var(--text-2); }
+    .cert-status {
+      display: inline-flex;
+      margin-top: 8px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      font-size: 10.5px;
+      font-weight: 800;
+      background: rgba(52,211,153,.09);
+      border: 1px solid rgba(52,211,153,.18);
+      color: #8ff7c8;
+    }
+
+    .awards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+    .award-card {
+      padding: 24px 24px;
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.08);
+      border-left: 4px solid #ffd36e;
+      backdrop-filter: blur(16px);
+      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    }
+    .award-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: rgba(90,200,255,.18); }
+    .award-card.teal { border-left-color: #78f0e2; }
+    .award-card.blue { border-left-color: #8bdcff; }
+    .award-card.purple { border-left-color: #d6b7ff; }
+    .award-card.green { border-left-color: #87f0c9; }
+    .award-card.golden { border-left-color: #ffd36e; }
+    
+    .award-eyebrow {
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #ffd36e;
+      margin-bottom: 8px;
+    }
+    .award-card.teal .award-eyebrow { color: #78f0e2; }
+    .award-card.blue .award-eyebrow { color: #8bdcff; }
+    .award-card.golden .award-eyebrow { color: #ffd36e; }
+    .award-card.purple .award-eyebrow { color: #d6b7ff; }
+    .award-card.green .award-eyebrow { color: #87f0c9; }
+    .award-card h3 {
+      font-family: var(--font-d);
+      font-size: 17px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: var(--text-1);
+    }
+    .award-card p {
+      font-size: 13.8px;
+      color: var(--text-2);
+      line-height: 1.68;
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+    .event-card {
+      padding: 22px 24px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.045);
+      backdrop-filter: blur(16px);
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .event-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(90,200,255,.22);
+      background: rgba(255,255,255,.06);
+    }
+    .event-num {
+      font-family: var(--font-d);
+      font-size: 26px;
+      font-weight: 900;
+      line-height: 1;
+      width: 42px;
+      flex-shrink: 0;
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .event-card h3 {
+      font-family: var(--font-d);
+      font-size: 15px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: var(--text-1);
+    }
+    .event-card p {
+      font-size: 13.8px;
+      color: var(--text-2);
+      line-height: 1.68;
+    }
+    .event-card p strong { color: var(--text-1); font-weight: 600; }
+
+    .goals-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .goal-card {
+      padding: 22px 22px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.045);
+      backdrop-filter: blur(16px);
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .goal-card:hover { transform: translateY(-3px); border-color: rgba(167,139,250,.24); }
+    .goal-icon { font-size: 28px; flex-shrink: 0; line-height: 1; }
+    .goal-card h4 {
+      font-family: var(--font-d);
+      font-size: 15px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: var(--text-1);
+    }
+    .goal-card p {
+      font-size: 13.8px;
+      color: var(--text-2);
+      line-height: 1.66;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 32px;
+      align-items: start;
+    }
+    .contact-cards { display: flex; flex-direction: column; gap: 14px; }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 18px 18px;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.045);
+      backdrop-filter: blur(16px);
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .contact-item:hover {
+      border-color: rgba(90,200,255,.22);
+      transform: translateX(4px);
+      background: rgba(255,255,255,.06);
+      text-decoration: none;
+    }
+    .ci-icon {
+      width: 46px; height: 46px;
+      flex-shrink: 0;
+      border-radius: 14px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.08);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+    }
+    .ci-text h4 {
+      font-size: 10.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      color: var(--text-3);
+      margin-bottom: 3px;
+    }
+    .ci-text p { font-size: 14px; font-weight: 600; color: var(--text-1); }
+
+    .cform { display: flex; flex-direction: column; gap: 16px; }
+    .fg { display: flex; flex-direction: column; gap: 7px; }
+    .fg label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-2);
+      letter-spacing: .3px;
+    }
+    .fg input, .fg textarea {
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 16px;
+      padding: 14px 16px;
+      font-family: var(--font-b);
+      font-size: 14px;
+      color: var(--text-1);
+      outline: none;
+      resize: vertical;
+      transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .fg input::placeholder, .fg textarea::placeholder { color: rgba(244,247,251,.34); }
+    .fg input:focus, .fg textarea:focus {
+      border-color: rgba(90,200,255,.38);
+      box-shadow: 0 0 0 4px rgba(90,200,255,.12);
+      background: rgba(255,255,255,.06);
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .hp-field { position: absolute; left: -9999px; }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 40px 0;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      background: rgba(255,255,255,.012);
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      font-size: 13px;
+      color: var(--text-2);
+      font-weight: 600;
+    }
+    .footer-links a:hover { color: #8bdcff; }
+    footer p { font-size: 13px; color: var(--text-3); }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .75s ease, transform .75s ease;
+      will-change: transform, opacity;
+    }
+    .reveal1 {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+    
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: .08s; }
+    .reveal-delay-2 { transition-delay: .16s; }
+    .reveal-delay-3 { transition-delay: .24s; }
+    .reveal-delay-4 { transition-delay: .32s; }
+
+    #back-top {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: var(--grad-primary);
+      color: white;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 14px 30px rgba(90,200,255,.16);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s ease, transform .2s ease;
+      z-index: 900;
+    }
+    #back-top.show { opacity: 1; pointer-events: auto; }
+    #back-top:hover { transform: translateY(-3px); }
+
+    .scroll-progress {
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      height: 2px;
+      z-index: 1001;
+      background: rgba(255,255,255,.03);
+    }
+    .scroll-progress span {
+      display: block;
+      height: 100%;
+      width: 0%;
+      background: var(--grad-primary);
+      box-shadow: 0 0 24px rgba(90,200,255,.4);
+      transform-origin: left center;
+    }
+
+    @media (max-width: 1080px) {
+      .hero-inner { grid-template-columns: 1fr .82fr; gap: 34px; }
+      .ai-grid { grid-template-columns: 1fr 1fr; }
+      .skills-grid { grid-template-columns: 1fr 1fr; }
+      .proj-grid { grid-template-columns: 1fr 1fr; }
+      .cert-grid { grid-template-columns: 1fr 1fr; }
+      .goals-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 960px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+
+      .hero-inner { grid-template-columns: 1fr; text-align: center; }
+      .hero-photo-col { display: none; }
+      .hero-sub { margin-inline: auto; }
+      .hero-actions { justify-content: center; }
+      .stats-wrap { grid-template-columns: repeat(3, 1fr); }
+      .stat-item:nth-child(4), .stat-item:nth-child(5), .stat-item:nth-child(6) { border-top: 1px solid rgba(255,255,255,.08); }
+
+      .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .about-highlights { grid-template-columns: 1fr 1fr; }
+      .awards-grid, .events-grid { grid-template-columns: 1fr; }
+      section { padding: 82px 0; }
+    }
+
+    @media (max-width: 620px) {
+      .container { padding: 0 18px; }
+      .section-desc { font-size: 15.5px; margin-bottom: 36px; }
+      .stats-wrap { grid-template-columns: repeat(2, 1fr); }
+      .stat-item:nth-child(5) { border-right: 1px solid rgba(255,255,255,.08); }
+      .stat-item:nth-child(6) { grid-column: 1 / -1; border-right: none; }
+
+      .about-highlights, .skills-grid, .proj-grid, .cert-grid, .goals-grid, .ai-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .mobile-nav ul { grid-template-columns: 1fr; }
+      .tl-header { flex-direction: column; }
+      .timeline { padding-left: 34px; }
+      .hero-h1 { letter-spacing: -2px; max-width: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════
+     NAVIGATION
+═══════════════════════ -->
+<nav id="nav" aria-label="Site navigation">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#home" aria-label="Rachit Bhatnagar — home">
+      <div class="logo-mark" aria-hidden="true">RB</div>
+      <div>
+        <div class="logo-name">Rachit Bhatnagar, PMI-ACP®</div>
+        <div class="logo-tag"> Solutions Engineering Technical Lead</div>
+      </div>
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#ai">AI</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#highlights">Events</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <a href="#contact">Let's Connect</a>
+    </div>
+
+    <button class="hamburger" id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+  <ul role="list">
+    <li><a href="#about"          class="mob-link">About</a></li>
+    <li><a href="#ai"             class="mob-link">AI Capabilities</a></li>
+    <li><a href="#skills"         class="mob-link">Skills</a></li>
+    <li><a href="#experience"     class="mob-link">Experience</a></li>
+    <li><a href="#projects"       class="mob-link">Projects</a></li>
+    <li><a href="#certifications" class="mob-link">Certifications</a></li>
+    <li><a href="#awards"         class="mob-link">Awards</a></li>
+    <li><a href="#highlights"     class="mob-link">Events</a></li>
+  </ul>
+  <a href="#contact" class="mobile-nav-cta mob-link">Let's Connect</a>
+</div>
+
+<!-- ═══════════════════════
+     HERO
+═══════════════════════ -->
+<section id="home" aria-label="Introduction">
+  <div class="container">
+    <div class="hero-inner">
+
+      <!-- Text Column -->
+      <div class="hero-text">
+        <div class="hero-eyebrow" role="text">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          Solutions Engineering Technical Lead at Forvis Mazars UK
+        </div>
+
+        <h1 class="hero-h1">
+          
+          <span class="grad-text">Powering</span><br>
+          Automation &<br>
+          <span class="grad-text">Transformation</span>
+
+<!--           Powering <span class="grad-text">Automation</span><br>
+               &amp;&nbsp;Transformation
+-->
+          
+        </h1>
+
+        <p class="hero-sub">I help clients build secure and scalable enterprise solutions with Microsoft Power Platform and Azure DevOps, transforming 
+          manual processes into efficient, governed, and sustainable digital experiences.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#experience" class="btn-primary">
+            View My Work
+          </a>
+          <a href="https://www.linkedin.com/in/rachitbhatnagar-pmi-acp/" target="_blank" rel="noopener" class="btn-linkedin">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <!-- Photo Column -->
+      <div class="hero-photo-col" aria-hidden="false">
+        <div>
+          <div class="hero-photo-glow" aria-hidden="true"></div>
+          <div class="hero-photo-frame">
+            <img
+              src="https://rachitbhatnagarpmi-acp.github.io/Portfolio/Rachit Bhatnagar -10x pic.jpg"
+              alt="Rachit Bhatnagar — Solutions Engineering Technical Lead at Forvis Mazars UK"
+            >
+          </div>      
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Stats Strip -->
+<div class="container stats-strip">
+  <div class="stats-wrap reveal" role="list" aria-label="Career highlights">
+    
+    <div class="stat-item reveal1" role="listitem">
+      <div class="stat-num">7+</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    
+    <div class="stat-item reveal reveal-delay-1" role="listitem">
+      <div class="stat-num" data-target="10" data-suffix="×">10×</div>
+      <div class="stat-label">Microsoft Certified</div>
+    </div>
+  
+    <div class="stat-item reveal reveal-delay-2" role="listitem">
+      <div class="stat-num" data-target="10" data-suffix="+">10+</div>
+      <div class="stat-label">Awards &amp; Honours</div>
+    </div>
+    
+    <div class="stat-item reveal reveal-delay-3" role="listitem">
+      <div class="stat-num" data-target="10" data-suffix="+">10+</div>
+      <div class="stat-label">Events Attended</div>
+    </div>
+  
+    <div class="stat-item reveal reveal-delay-1" role="listitem">
+      <div class="stat-num" data-target="20" data-suffix="+">20+</div>
+      <div class="stat-label">Enterprise Apps</div>
+    </div>
+    
+    <div class="stat-item reveal reveal-delay-2" role="listitem">
+      <div class="stat-num" data-target="1000" data-suffix="+">1000+</div>
+      <div class="stat-label">Users Trained</div>
+    </div>
+    
+    
+  </div>
+</div>
+
+<div class="grad-divider"></div>
+
+<!-- ═══════════════════════
+     ABOUT
+═══════════════════════ -->
+<section id="about" aria-labelledby="about-h">
+  <div class="container">
+    <div class="section-eyebrow">Who I Am</div>
+    <div>
+      <div class="about-body reveal">
+        <h2 class="section-title" id="about-h"><span class="grad-text">Solutions Engineer Technical Lead</span></h2>
+        
+<p class="about-lead">Solutions Engineering Technical Lead with over 7 years of experience leading enterprise automation and digital transformation initiatives, helping organizations streamline operations, improve efficiency, and achieve measurable business outcomes.
+          </p>
+        
+        <p>
+             I specialize in designing secure and scalable solutions on Microsoft Power Platform, enabling organizations to automate processes, empower citizen developers, and accelerate digital innovation. My expertise spans solution architecture, enterprise governance, automation 
+          strategy, and technology leadership, delivering sustainable solutions that create lasting business value.   
+        </p>
+        
+        <p>
+        Over the past two years, I have been honored with the prestigious Developer of the Year Award at the Forvis Mazars Innovation Awards, led a complex Microsoft 365 Global Migration, 
+          and represented the team during a successful ISO 27001 renewal audit.
+        </p>
+        
+        <p>
+Beyond technology, I am passionate about knowledge sharing and community engagement. I have delivered training and enablement sessions to more than 400 citizen developers and 
+          200 global professionals. As an active member of the PMI North India Chapter,
+          I am committed to continuous learning, regularly participating in industry workshops and events.
+          Outside of work, I enjoy exploring new cultures and have travelled to more than 10 countries.
+          
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="grad-divider"></div>
+
+<!-- ═══════════════════════
+     AI CAPABILITIES & INNOVATION
+═══════════════════════ -->
+<section id="ai" aria-labelledby="ai-h">
+  <div class="container">
+    <div class="section-eyebrow">Artificial Intelligence</div>
+    <h2 class="section-title" id="ai-h"><span class="grad-text">AI Capabilities &amp; Innovation</span></h2>
+    <p class="section-desc" style="color:rgba(255,255,255,0.55);max-width:1040px;">
+      
+      Beyond Power Platform, I leverage Microsoft's AI ecosystem to design intelligent solutions that combine low code AI capabilities, autonomous agents, and custom integrations to streamline operations, improve decision making, and accelerate innovation.
+      </p>
+
+    <div class="ai-grid">
+      <div class="ai-card blue reveal">
+        <div class="ai-icon blue">🧠</div>
+        <h3>AI Builder</h3>
+        <p>
+          Leveraged AI Builder to embed intelligent document processing, form recognition, and predictive capabilities into Power Platform solutions, enabling smarter automation without the complexity of traditional machine learning development.</p>
+      </div>
+      <div class="ai-card teal reveal reveal-delay-1">
+        <div class="ai-icon teal">🤖</div>
+        <h3>CoPilot Studio</h3>
+        <p>Leveraged Microsoft Copilot Studio to build intelligent conversational agents that automated employee self service, IT support, and business workflows, enabling faster resolution times and more efficient operations across the organization.</p>
+      </div>
+      <div class="ai-card purple reveal reveal-delay-2">
+        <div class="ai-icon purple">⚡</div>
+        <h3>AI Agents</h3>
+        <p>Built autonomous AI agents capable of reasoning, executing multi step tasks, and interacting with enterprise systems through APIs, Dataverse, and SharePoint, enabling scalable end to end automation and enhanced operational efficiency.</p>
+      </div>
+      <div class="ai-card gold reveal reveal-delay-3">
+        <div class="ai-icon gold">🔌</div>
+        <h3>Custom Connectors &amp; Integrations</h3>
+        <p>Built custom connectors to integrate Power Platform solutions with internal and external APIs, enabling secure data exchange, streamlined workflows, and seamless connectivity across enterprise systems.</p>
+      </div>
+    </div>
+
+    <div class="ai-footer-note reveal" style="margin-top:28px;">
+Certified in <strong>AI 900 Azure AI Fundamentals</strong> and a participant at the <strong>India AI Impact Summit 2026</strong>, I continuously invest in learning and exploring emerging AI technologies to bring practical innovation into enterprise solutions.
+      
+    </div>
+  </div>
+</section>
+
+<div class="grad-divider"></div>
+
+<!-- ═══════════════════════
+     SKILLS & CAPABILITIES
+═══════════════════════ -->
+<section id="skills" aria-labelledby="skills-h">
+  <div class="container">
+    <div class="section-eyebrow">Expertise</div>
+    <h2 class="section-title" id="skills-h"><span class="grad-text">Skills &amp; Capabilities</span> </h2>
+<p class="section-desc">End to end Power Platform expertise across solution architecture, application development, automation, analytics, AI innovation, governance, and strategic technology leadership.</p>
+
+    <div class="skills-grid">
+      <div class="skill-group reveal">
+        <div class="skill-group-icon" aria-hidden="true" style="color:#8bdcff;">⚙️Power Platform & Microsoft 365 services</div>
+        <div class="pills">
+          <span class="pill">Canvas Power Apps</span>
+          <span class="pill">Model Driven Apps</span>
+          <span class="pill">Power Pages (Portals)</span>
+          <span class="pill">Power BI</span>
+          <span class="pill">Power Automate workflows</span>
+          <span class="pill">Nintex workflows</span>
+          <span class="pill">SharePoint Online</span>
+          <span class="pill">Dataverse</span>
+          <span class="pill">MS Planner</span>       
+          <span class="pill">MS Teams</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal reveal-delay-1">
+        <div class="skill-group-icon" aria-hidden="true" style="color:#8bdcff;">🤖Artificial Intelligence & Smart Automation</div>
+        <div class="pills">
+        <span class="pill">AI Builder</span>
+          <span class="pill">AI Agents</span>
+          <span class="pill">RPA</span>
+          <span class="pill">CoPilot Studio</span>
+          <span class="pill">Power Automate Desktop</span>
+          <span class="pill">Custom Connectors</span>
+          <span class="pill">Chatbots</span>
+          <span class="pill">OCR Document Processing</span>
+
+          
+        </div>
+      </div>
+
+      <div class="skill-group reveal reveal-delay-2">
+        <div class="skill-group-icon" aria-hidden="true" style="color:#8bdcff;">🛠️DevOps & Full stack</div>
+    
+        <div class="pills">
+          <span class="pill">ALM &amp; CI/CD</span>
+          <span class="pill">PowerShell</span>
+          <span class="pill">Azure DevOps</span>
+          <span class="pill">Solution Packaging</span>
+          <span class="pill">Python</span>
+          
+        </div>
+      </div>
+
+      <div class="skill-group reveal">
+        <div class="skill-group-icon" aria-hidden="true" style="color:#8bdcff;">🛡️Governance & Security</div>
+        <div class="pills">
+          <span class="pill">Managed Environments</span>
+          <span class="pill">Backup &amp; Recovery</span>
+                    <span class="pill">Environment Strategy</span>
+                    <span class="pill">Risk Management</span>
+
+          <span class="pill">Data Loss Prevention policies</span>
+          <span class="pill">Retention policies</span>
+          <span class="pill">Auditing</span>
+                    <span class="pill">ISO 27001</span>
+
+
+
+          
+        </div>
+      </div>
+
+      <div class="skill-group reveal reveal-delay-1">
+        <div class="skill-group-icon" aria-hidden="true" style="color:#8bdcff;">🎯Leadership</div>
+        <div class="pills">
+          <span class="pill">PMI-ACP®</span>
+          <span class="pill">Agile Delivery</span>
+
+          <span class="pill">Stakeholder Management</span>
+          <span class="pill">Stakeholder Engagement</span>
+          <span class="pill">Hiring</span>
+          <span class="pill">Mentoring</span>
+          
+          <span class="pill">Training &amp; Enablement</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal reveal-delay-2">
+        <div class="skill-group-icon" aria-hidden="true" style="color:#8bdcff;">🌟Soft Skills</div>
+        <div class="pills">
+          <span class="pill">Prioritisation</span>
+          <span class="pill">Delegation</span>
+          <span class="pill">Team Building</span>
+          <span class="pill">Public Speaking</span>
+          <span class="pill">Executive Communication</span>
+          <span class="pill">Problem solving</span>
+          <span class="pill">Decision Making</span>
+          <span class="pill">Adaptability</span>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="grad-divider"></div>
+
+<!-- ═══════════════════════
+     PROFESSIONAL EXPERIENCE
+═══════════════════════ -->
+<section id="experience" aria-labelledby="exp-h">
+  <div class="container">
+    <div class="section-eyebrow">Career Journey</div>
+    <h2 class="section-title" id="exp-h"><span class="grad-text">Professional Experience</span></h2>
+    <p class="section-desc">7+ years of experience architecting enterprise solutions, driving automation, and delivering measurable business outcomes across multiple clients and industries.</p>
+
+    <div class="timeline reveal">
+
+      <div class="tl-item">
+        <div class="tl-dot" aria-hidden="true"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-title">Solutions Engineering Technical Lead</div>
+            <div class="tl-date">Feb 2024 – Present</div>
+          </div>
+          <div class="tl-company">Forvis Mazars UK</div>
+          <ul class="tl-bullets">
+<li>Leading a team of 3 engineers while managing a portfolio of <strong>10+ enterprise applications</strong> supporting business-critical operations across the firm.</li>
+
+<li>Architecting and delivering enterprise-grade Power Platform solutions using <strong>Power Apps, Power Automate, Power BI, Dataverse, SharePoint, AI Builder, and Microsoft 365</strong>, driving automation and operational efficiency at scale.</li>
+
+<li>Leading Power Platform Governance &amp; Security initiatives, implementing DLP policies, Managed Environments, access controls, and Center of Excellence (CoE) practices, resulting in a <strong>50%+ improvement in security posture within two months</strong>.</li>
+
+<li>Represented the team during the <strong>ISO 27001 renewal audit</strong>, earning recognition from external auditors for the maturity of governance controls, security practices, and documentation standards.</li>
+
+<li>Led the <strong>M365 Global Migration Project</strong>, one of the firm's most complex transformation initiatives, receiving the <strong>Extra Miler Award</strong> for exceptional delivery and team performance.</li>
+
+<li>Defining and driving Azure DevOps strategy, including project governance, license optimization automation, and ALM pipeline implementation in collaboration with the DevOps team.</li>
+
+<li>Collaborated with Microsoft specialists on a comprehensive Power Platform tenant assessment, with key governance, security, and operational areas recognized as aligned with industry best practices.</li>
+
+<li>Received the <strong>Developer of the Year 2025 Award</strong> and the <strong>Quality Trailblazer Award</strong> at the Forvis Mazars Innovation Awards for contributions to enterprise automation, innovation, and platform excellence.</li>
+
+<li>Partnering with global stakeholders to deliver solutions end-to-end, from requirements gathering and solution design through deployment, adoption, and ongoing support.</li>
+
+<li>Delivered Power Platform Governance and Enablement workshops to <strong>400+ citizen developers</strong>, covering environment strategy, application lifecycle management (ALM), governance standards, and Go-Live processes.</li>
+
+<li>Applied Agile, Scrum, and Waterfall delivery methodologies across diverse projects, tailoring approaches to business objectives, technical complexity, and stakeholder needs.</li>
+
+<li>Attended the <strong>India AI Impact Summit 2026</strong> in New Delhi, gaining insights into emerging enterprise AI technologies and their practical application in business transformation.</li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" aria-hidden="true"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-title">Senior Innovation Developer</div>
+            <div class="tl-date">Apr 2022 – Feb 2024</div>
+          </div>
+          <div class="tl-company">Forvis Mazars UK</div>
+          <ul class="tl-bullets">
+<li>Designed and delivered multiple enterprise Power Apps, Power Automate solutions, Power BI dashboards, and AI-powered applications that streamlined business processes and improved operational efficiency across the firm.</li>
+
+<li>Received direct <strong>Partner SPOT Awards</strong> for two high-impact projects that delivered significant business value and enhanced user experience.</li>
+
+<li>Developed an application that was shortlisted among the <strong>Top 3 Quality Solutions</strong> at the <strong>Global CARL Partners Conference 2023</strong>, recognizing excellence in solution design and delivery.</li>
+
+<li>Partnered with stakeholders across the UK and global teams to gather requirements, design solutions, and successfully deliver business-critical applications from concept to deployment.</li>
+
+<li>Delivered Power Automate training sessions for <strong>50+ UK professionals</strong> and <strong>200+ global participants</strong>, promoting automation adoption and sharing best practices across the organization.</li>
+
+<li>Conducted enablement and knowledge-sharing sessions for the Global AOS team and the UK AOS service line, helping teams leverage the Power Platform more effectively.</li>
+
+<li>Presented solution showcases and innovation initiatives to senior global stakeholders, including Directors and Partners, at the India offsite.</li>
+
+<li>Developed innovative automation solutions beyond traditional business processes, including an employee engagement tool that automated Fun Friday host selection and demonstrated the versatility of the Power Platform.</li>
+
+<li>Contributed to the firm's digital transformation journey by identifying automation opportunities, reducing manual effort, and promoting a culture of continuous improvement.</li>
+            
+            </ul>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" aria-hidden="true"></div>
+        <div class="tl-card">
+          <div class="tl-header">
+            <div class="tl-title">Senior System Engineer</div>
+            <div class="tl-date">2019 – Apr 2022</div>
+          </div>
+          <div class="tl-company">Infosys</div>
+          <ul class="tl-bullets">
+<li>Worked as a <strong>Senior System Engineer</strong> at Infosys, delivering customer-focused digital solutions and automation initiatives for global clients across multiple industries.</li>
+
+<li>Led a team of 3 developers, coordinating delivery activities, providing technical guidance, and ensuring successful execution across multiple client engagements.</li>
+
+<li>Designed and developed reusable, scalable, and user-centric solutions that improved business processes, enhanced productivity, and accelerated solution delivery.</li>
+
+<li>Automated repetitive and manual tasks through responsive web applications and workflow solutions, combining modern UI/UX principles with accessibility standards to improve user experience and operational efficiency.</li>
+
+<li>Migrated on-premises SharePoint environments to <strong>SharePoint Online</strong>, ensuring seamless transitions while modernizing collaboration and document management capabilities.</li>
+
+<li>Developed and maintained <strong>Nintex workflows</strong>, <strong>InfoPath forms</strong>, and <strong>PowerShell automation scripts</strong>, streamlining business processes and reducing administrative overhead.</li>
+
+<li>Built Power Apps and Power Automate solutions that digitized manual workflows, improved data accessibility, and increased process efficiency for client organizations.</li>
+
+<li>Collaborated directly with clients and stakeholders to gather requirements, design technical solutions, and deliver projects aligned with business objectives.</li>
+
+<li>Mentored and trained <strong>8+ new joiners</strong>, supporting onboarding, technical development, and knowledge sharing across different stages of their professional journey.</li>
+
+            
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="grad-divider"></div>
+
+<!-- ═══════════════════════
+     PROJECTS
+═══════════════════════ -->
+<section id="projects" aria-labelledby="proj-h">
+  <div class="container">
+    <div class="section-eyebrow">Portfolio</div>
+    <h2 class="section-title" id="proj-h"><span class="grad-text">Projects</span></h2>
+    <p class="section-desc">A selection of high impact enterprise initiatives delivering innovation, operational excellence, and measurable outcomes across automation, governance, AI, and analytics.</p>
+
+    <div class="proj-grid reveal">
+
+      <div class="proj-card">
+        <div class="proj-badge-wrap">
+          <span class="badge-award">🏅 Global CARL conference Top 3 Nomination</span>
+        </div>
+        <div class="proj-tech">Power Apps · Power Automate · Dataverse · Power BI</div>
+        <h3>Enterprise app for Quality &amp; Compliance</h3>
+        <p>Firm-wide Power Platform solution streamlining quality and compliance management. Nominated top-3 under "Quality" at the Global CARL Partners Conference 2023.</p>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-badge-wrap">
+          <span class="badge-award">🏅 Partner SPOT Award</span>
+        </div>
+        <div class="proj-tech">Power Automate workflows · SharePoint · MS Teams</div>
+        <h3>Automation Hub</h3>
+        <p>Automation framework eliminating repetitive and redundant tasks. Integrated with MS Teams and SharePoint.</p>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-badge-wrap">
+          <span class="badge-global">🌍 Global Transformation</span>
+        </div>
+        <div class="proj-tech">Power Platform · Azure DevOps · Governance & Security</div>
+        <h3>M365 Global Migration</h3>
+        <p>Led the most complex transformation project at Forvis Mazars by colloboratng very closely with stakeholders from UK and India. Implemented robust fallback strategies, strong governance, and business continuity controls. Received the Extra Miler Award.</p>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-badge-wrap">
+          <span class="badge-governance">🛡️ Governance & Security</span>
+        </div>
+        <div class="proj-tech">DLP Policies · Environment Management · Auditing</div>
+        <h3>Power Platform Governance & Security Management</h3>
+        <p>End-to-end governance framework covering DLP policies, managed environments, access management, backup &amp; recovery, and audit logs. Recognised by Microsoft as aligned with industry best practices.</p>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-badge-wrap">
+          <span class="badge-ai">🤖 AI-Powered</span>
+        </div>
+        <div class="proj-tech">CoPilot Studio · AI Builder · Custom Connectors</div>
+        <h3>AI &amp; CoPilot Studio Agents</h3>
+        <p>Designed and deployed conversational AI agents and AI Builder models to automate employee self-service, document processing, and enterprise workflows through intelligent automation.</p>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-badge-wrap">
+          <span class="badge-training">📚 Global Training</span>
+        </div>
+        <div class="proj-tech">Power Platform · Power Apps· Power Automate</div>
+        <h3>Global Power PLatform Trainings</h3>
+        <p>Led two major training programmes: one for 50+ UK professionals and one for 200+ participants globally — demonstrating real-world automation use cases including Teams notifications, email reminders, and Power Apps integrations.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="grad-divider"></div>
+
+<!-- ═══════════════════════
+     CERTIFICATIONS
+═══════════════════════ -->
+<section id="certifications" aria-labelledby="cert-h">
+  <div class="container">
+    <div class="section-eyebrow">Credentials</div>
+    <h2 class="section-title" id="cert-h">Certifications <span class="grad-text">10×&nbsp;Microsoft</span></h2>
+    <p class="section-desc">10x Microsoft certifications and PMI-ACP® credential, demonstrating expertise across Power Platform, Azure, AI, solution architecture, and agile delivery practices.</p>
+
+    <div class="cert-grid">
+
+      <div class="cert-card reveal">
+        <div class="cert-icon" style="background:linear-gradient(135deg,#F59E0B,#EF4444);">★</div>
+        <div class="cert-body">
+          <h4>PL-600: Power Platform Solution Architect</h4>
+          <span>Microsoft — Highest level Power Platform certification</span>
+          <div class="cert-status">✓ Certified</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal reveal-delay-1">
+        <div class="cert-icon">P5</div>
+        <div class="cert-body">
+          <h4>PL-500: Power Automate RPA Developer</h4>
+          <span>Microsoft — Robotic Process Automation</span>
+          <div class="cert-status">✓ Certified</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal reveal-delay-2">
+        <div class="cert-icon">P4</div>
+        <div class="cert-body">
+          <h4>PL-400: Power Platform Developer</h4>
+          <span>Microsoft — Custom components &amp; connectors</span>
+          <div class="cert-status">✓ Certified</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon" style="background:linear-gradient(135deg,#F59E0B,#F97316);">📊</div>
+        <div class="cert-body">
+          <h4>PL-300: Power BI Data Analyst</h4>
+          <span>Microsoft — Data analytics &amp; visualisation</span>
+          <div class="cert-status">✓ Certified</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal reveal-delay-1">
+        <div class="cert-icon">P2</div>
+        <div class="cert-body">
+          <h4>PL-200: Functional Consultant</h4>
+          <span>Microsoft — Business solutions design</span>
+          <div class="cert-status">✓ Certified</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal reveal-delay-2">
+        <div class="cert-icon">P1</div>
+        <div class="cert-body">
+          <h4>PL-100: Power Platform App Maker</h4>
+          <span>Microsoft — App development fundamentals</span>
+          <div class="cert-status">✓ Certified</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon" style="background:linear-gradient(135deg,#0078D4,#00B4D8);">P0</div>
+        <div class="cert-body">
+          <h4>PL-900: Power Platform Fundamentals</h4>
+          <span>Microsoft — Platform foundations</span>
+          <div class="cert-status">✓ Certified</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal reveal-delay-1">
+        <div class="cert-icon" style="background:linear-gradient(135deg,#06B6D4,#10B981);">AI</div>
+        <div class="cert-body">
+          <h4>AI-900: Azure AI Fundamentals</h4>
+          <span>Microsoft — Machine learning &amp; cognitive services</span>
+          <div class="cert-status">✓ Certified</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal reveal-delay-2">
+        <div class="cert-icon" style="background:linear-gradient(135deg,#0078D4,#005A9E);">AZ</div>
+        <div class="cert-body">
+          <h4>AZ-900: Azure Fundamentals</h4>
+          <span>Microsoft — Cloud concepts &amp; services</span>
+          <div class="cert-status">✓ Certified</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon" style="background:linear-gradient(135deg,#7C3AED,#8764B8);">MS</div>
+        <div class="cert-body">
+          <h4>MS-900: Microsoft 365 Fundamentals</h4>
+          <span>Microsoft — M365 services &amp; cloud productivity</span>
+          <div class="cert-status">✓ Certified</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal reveal-delay-1" style="grid-column: span 2;">
+        <div class="cert-icon" style="background:linear-gradient(135deg,#003087,#005BDD);">PMI</div>
+        <div class="cert-body">
+          <h4>PMI-ACP®: Project Management Institute - Agile Certified Practitioner</h4>
+          <span>Above Target across all 7 domains - Agile Principles and Mindset, Value-Driven Delivery, Stakeholder Engagement, Team Performance, Adaptive Planning, Problem Detection and Resolution, and Continuous Improvement (Product, Process, People)</span>
+          
+
+          
+          <div class="cert-status">✓ Certified</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="grad-divider"></div>
+
+<!-- ═══════════════════════
+     AWARDS & HONOURS
+═══════════════════════ -->
+<section id="awards" aria-labelledby="awards-h">
+  <div class="container">
+    <div class="section-eyebrow">Recognition</div>
+    <h2 class="section-title" id="awards-h"><span class="grad-text">Awards &amp; Honours</span></h2>
+    <p class="section-desc">Recognised for technical excellence, leadership, and firm-wide impact at multiple levels.</p>
+
+    <div class="awards-grid reveal">
+      
+      <a href="/Portfolio/Rachit Bhatnagar - Developer of the Year Award pic.PNG" target="_blank" class="award-card golden award-link">
+        <div class="award-eyebrow">🏆 Forvis Mazars Innovation Awards 2025</div>
+        <h3>Developer of the Year 2025</h3>
+        <p>Recognized for outstanding application delivery, innovation leadership, and firm-wide governance impact. Received at the Innovation Awards ceremony, attended by colleagues and senior leaders from across the UK and India.</p>
+      </a>
+      
+
+      <a href="/Portfolio/Rachit Bhatnagar, PMI-ACP - Quality Trailblazer Award.jpeg" target="_blank" class="award-card golden award-link">
+        <div class="award-eyebrow">🏆 Forvis Mazars India Offsite</div>
+        <h3>Quality Trailblazer Award</h3>
+        <p>Received from the CFO and a senior Partner during the India offsite event, attended by over 300 colleagues. In addition to being recognized for quality and delivery excellence, I was invited to the stage to present key project achievements and share insights with peers, leaders, and stakeholders from across the organization.</p>
+      </a>
+
+      <a href="/Portfolio/Rachit Bhatnagar - SPOT Award pic.PNG" target="_blank" class="award-card blue award-link">
+        <div class="award-eyebrow">⭐ Partner Recognition</div>
+        <h3>Partner SPOT Award for an Enterprise Application</h3>
+        <p>Received in recognition of designing and delivering an enterprise Helpdesk application in partnership with the Product Owner. Supporting the Audit service line, the solution automates and manages over 20,000 tickets each year, driving operational efficiency and enhancing the user experience.</p>
+      </a>
+
+      <a href="/Portfolio/Rachit Bhatnagar - Partner SPOT Award.PNG" target="_blank" class="award-card blue award-link">
+        <div class="award-eyebrow">⭐ Partner Recognition</div>
+        <h3>Partner SPOT Award for an Automation project</h3>
+        <p>Received direct recognition from a Partner for developing a client focused feedback application under challenging timelines and significant delivery pressures. By working closely with stakeholders and rapidly translating requirements into a scalable solution, the project was successfully delivered within a critical timeframe while meeting key business objectives.</p>
+      </a>
+
+      <a href="/Portfolio/Rachit Bhatnagar - Extra Miler Award pic2.jpg" target="_blank" class="award-card purple award-link">
+        <div class="award-eyebrow">🚀 Project Recognition</div>
+        <h3>Extra Miler Award</h3>
+        <p>Awarded for exceptional teamwork, dedication, and contribution to the successful delivery of the Microsoft 365 Global Migration Project and other complex enterprise initiatives. Recognized for consistently going the extra mile to overcome challenges and deliver results beyond expectations.</p>
+      </a>
+
+      <a href="/Portfolio/Rachit Bhatnagar - Brainiac Award.png" target="_blank" class="award-card purple award-link">
+        <div class="award-eyebrow">🧠 Internal Award</div>
+        <h3>Brainiac Award</h3>
+        <p>Recognized for exceptional technical capability, innovative thinking, and intellectual contribution to complex projects within the team, helping deliver effective solutions to challenging business and technology problems.</p>
+      </a>
+
+      <div class="award-card golden">
+        <div class="award-eyebrow">🌐 Global Conference</div>
+        <h3>Top 3 App for Quality — CARL Conference</h3>
+        <p>Recognized at the Global CARL Partners Conference, where an enterprise application I developed was selected among the Top 3 entries in the Quality category. The nomination reflected a strong focus on solution excellence, user experience, and delivery standards.</p>
+      </div>
+
+      <a href="/Portfolio/Shine e-card for ISO27001 Audit - Rachit Bhatnagar.png" target="_blank" class="award-card golden award-link">
+        <div class="award-eyebrow">🔐 Security &amp; Governance</div>
+        <h3>Shine eCard Recognitions (×2)</h3>
+        <p>Recognized by senior leaders across the organization for impactful contributions to governance and security. Received one recognition from the Head of IT Security for support during the ISO 27001 renewal audit and another from the Head of IT Architecture & Solutions for advancing Power Platform governance practices.</p>
+      </a>
+
+      <div class="award-card teal">
+        <div class="award-eyebrow">🍽️ Executive Recognition</div>
+        <h3>Presented Application to Senior Stakeholders</h3>
+        <p>Invited to present an enterprise application to senior stakeholders from across the UK, highlighting its business value and impact. The presentation was followed by an exclusive networking and fine dining experience with senior leaders, marking a memorable moment in my professional journey.</p>
+      </div>
+
+      <a href="/Portfolio/Rachit Bhatnagar - Star Performer Award.png" target="_blank" class="award-card teal award-link">
+        <div class="award-eyebrow">🚀 Project Recognition</div>
+        <h3>Star Performer – Insta Award🏆</h3>
+        <p>Awarded for exceptional performance and dedication during a cloud migration initiative, contributing to the successful transition of critical systems while ensuring quality, reliability, and minimal business disruption.</p>
+      </a>
+
+
+    </div>
+  </div>
+</section>
+
+<div class="grad-divider"></div>
+
+<!-- ═══════════════════════
+     Events
+═══════════════════════ -->
+<section id="highlights" aria-labelledby="highlights-h">
+  <div class="container">
+    <div class="section-eyebrow">Learning &amp; Community</div>
+    <h2 class="section-title" id="highlights-h"><span class="grad-text">Events</span></h2>
+    <p class="section-desc">Regularly participating in industry conferences, workshops, and training events to stay current with emerging technologies, expand professional networks, and contribute to knowledge sharing within the technology community.</p>
+
+    <div class="events-grid">
+
+      <div class="event-card reveal">
+        <div class="event-num">01</div>
+        <div>
+          <h3>Power Platform Governance Workshop</h3>
+          <p>Conducted a comprehensive governance session for <strong>400+ citizen developers</strong> at Forvis Mazars — covering environment strategy, ALM, managed environments, Go-Live approvals, and migration impact.</p>
+        </div>
+      </div>
+
+      <div class="event-card reveal reveal-delay-1">
+        <div class="event-num">02</div>
+        <div>
+          <h3>Global Power Automate Training</h3>
+          <p>Led two major training programmes — one for 50+ UK professionals and one for <strong>200+ global participants</strong> — on Power Automate use cases and automation best practices.</p>
+        </div>
+      </div>
+
+      <div class="event-card reveal">
+        <div class="event-num">03</div>
+        <div>
+          <h3>PMSAC 2025 — Hyderabad</h3>
+          <p>Attended the <strong>Project Management South Asia Conference</strong> with 1,000+ PM professionals including Managers, Directors, and Partners. Gained insights on storytelling, leadership, and execution excellence.</p>
+        </div>
+      </div>
+
+      <div class="event-card reveal reveal-delay-1">
+        <div class="event-num">04</div>
+        <div>
+          <h3>ProjectSutra 2025 — PMI NIC</h3>
+          <p>Attended PMI North India Chapter's ProjectSutra event — a masterclass in communication, digital transformation, AI/LLMs, and stakeholder alignment. Shared insights about collaborative culture at Forvis Mazars.</p>
+        </div>
+      </div>
+
+      <div class="event-card reveal">
+        <div class="event-num">05</div>
+        <div>
+          <h3>PMI Meet &amp; Greet 2026</h3>
+          <p>Attended the PMI North India Chapter networking event at Crowne Plaza — key learnings on work-life integration, prioritisation, empowerment, and leadership from senior PM professionals.</p>
+        </div>
+      </div>
+
+      <div class="event-card reveal reveal-delay-1">
+        <div class="event-num">06</div>
+        <div>
+          <h3>India AI Impact Summit 2026</h3>
+          <p>Attended the <strong>India AI Impact Summit</strong> in New Delhi — gaining hands-on insights into the rapidly evolving AI landscape and its implications for enterprise transformation.</p>
+        </div>
+      </div>
+
+      <div class="event-card reveal">
+        <div class="event-num">07</div>
+        <div>
+          <h3>PMI "I Am Remarkable" Workshop</h3>
+          <p>Attended and participated in the PMI workshop led by Neelima Chakara. Shared "The Golden Triangle of Learning, Earning, and Having Fun" concept with 100+ professionals — received strong resonance from the audience.</p>
+        </div>
+      </div>
+
+      <div class="event-card reveal reveal-delay-1">
+        <div class="event-num">08</div>
+        <div>
+          <h3>Lonavala Offsite — India Team</h3>
+          <p>Presented to global stakeholders including Directors and Partners at the Forvis Mazars India offsite. Gave a dance performance, completed a bucket-list rappelling activity, and deepened connections with senior leaders.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="grad-divider"></div>
+
+<!-- ═══════════════════════
+     2026 GOALS
+═══════════════════════ -->
+<section id="goals" aria-labelledby="goals-h">
+  <div class="container">
+    <div class="section-eyebrow">Looking Ahead</div>
+    <h2 class="section-title" id="goals-h"><span class="grad-text">2026 Goals</span></h2>
+    <p class="section-desc">Focused on continuous growth, lifelong learning, and delivering meaningful impact through technology, leadership, and community engagement throughout 2026.</p>
+
+    <div class="goals-grid">
+
+      <div class="goal-card reveal">
+        <div class="goal-icon">📖</div>
+        <div>
+          <h4>Read 5 Books <div class="cert-status"> ON TRACK ✓</div> </h4>
+          <p>Focused on finance, personal growth, and project management to continue learning beyond the office.</p>
+        </div>
+      </div>
+
+      <div class="goal-card reveal reveal-delay-1">
+        <div class="goal-icon">🏢</div>
+        <div>
+          <h4>Participate in 5 PM events <div class="cert-status"> ON TRACK ✓</div> </h4>
+          <p>Active participation in PMI and other project management and leadership events to keep growing as a leader.</p>
+        </div>
+      </div>
+
+      <div class="goal-card reveal reveal-delay-2">
+        <div class="goal-icon">🎓</div>
+        <div>
+          <h4>Renew or Acquire 5 Certifications <div class="cert-status"> COMPLETED ✓</div> </h4>
+          <p>Advancing technical excellence through continuous learning, including achieving the ITIL® 4 certification.</p>
+        </div>
+      </div>
+
+      <div class="goal-card reveal">
+        <div class="goal-icon">🤖</div>
+        <div>
+          <h4>Implement AI in Projects <div class="cert-status">ON TRACK ✓</div> </h4>
+          <p>Upskill in AI and implement AI capabilities in at least two real-world projects, leveraging CoPilot Studio and AI Builder.</p>
+        </div>
+      </div>
+
+      <div class="goal-card reveal reveal-delay-1">
+        <div class="goal-icon">🌍</div>
+        <div>
+          <h4>Travel to 2 Countries <div class="cert-status"> ON TRACK ✓</div> </h4>
+          <p>Continue learning through travel and experiencing diverse cultures and global perspectives.</p>
+        </div>
+      </div>
+
+      <div class="goal-card reveal reveal-delay-2">
+        <div class="goal-icon">🔍</div>
+        <div>
+          <h4>Application Audit <div class="cert-status"> COMPLETED ✓</div> </h4>
+          <p>Leading an external audit of development processes, SDLC, and Power Platform applications to further strengthen quality and governance.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="grad-divider"></div>
+
+<!-- ═══════════════════════
+     CONTACT
+═══════════════════════ -->
+<section id="contact" aria-labelledby="contact-h">
+  <div class="container">
+    <div class="section-eyebrow">Get In Touch</div>
+    <h2 class="section-title" id="contact-h"><span class="grad-text">Let's Connect</span></h2>
+    <p class="section-desc">Open to conversations around Power Platform, AI, Governance & Security, enterprise automation, and digital transformation strategies.</p>
+
+    <div class="contact-grid reveal">
+
+      <div class="contact-cards">
+        <a href="mailto:rachitbhatnagar3012@gmail.com" class="contact-item">
+          <div class="ci-icon" aria-hidden="true">✉️</div>
+          <div class="ci-text">
+            <h4>Email</h4>
+            <p>rachitbhatnagar3012@gmail.com</p>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/rachitbhatnagar-pmi-acp/" target="_blank" rel="noopener" class="contact-item">
+          <div class="ci-icon" aria-hidden="true">💼</div>
+          <div class="ci-text">
+            <h4>LinkedIn</h4>
+            <p>linkedin.com/in/rachitbhatnagar-pmi-acp</p>
+          </div>
+        </a>
+        <div class="contact-item" style="pointer-events:none;">
+          <div class="ci-icon" aria-hidden="true">🌍</div>
+          <div class="ci-text">
+            <h4>Location</h4>
+            <p>India · Serving UK &amp; Global Clients Remotely</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════
+     FOOTER
+═══════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/rachitbhatnagar-pmi-acp/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:rachitbhatnagar3012@gmail.com">Email</a>
+      <a href="#about">About</a>
+      <a href="#ai">AI</a>
+      <a href="#experience">Experience</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#awards">Awards</a>
+      <a href="#highlights">Events</a>
+      <a href="#goals">Goals</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p>© 2026 Rachit Bhatnagar, PMI-ACP® &nbsp;·&nbsp; All rights reserved &nbsp;·&nbsp; Solutions Engineering Technical Lead at Forvis Mazars UK</p>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button id="back-top" aria-label="Back to top" title="Back to top">↑</button>
+
+<!-- ═══════════════════════
+     SCRIPTS
+═══════════════════════ -->
+
+<script>
+(function () {
+  'use strict';
+
+  const btn = document.getElementById('hamburger-btn');
+  const panel = document.getElementById('mobile-nav');
+
+  if (btn && panel) {
+    btn.addEventListener('click', () => {
+      const open = panel.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      panel.setAttribute('aria-hidden', !open);
+    });
+
+    document.querySelectorAll('.mob-link').forEach(a => {
+      a.addEventListener('click', () => {
+        panel.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        panel.setAttribute('aria-hidden', 'true');
+      });
+    });
+  }
+
+  const revealObs = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        revealObs.unobserve(entry.target);
+      }
+    }
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const navObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id));
+      }
+    });
+  }, { threshold: 0.42 });
+  sections.forEach(s => navObs.observe(s));
+
+  function runCounter(el) {
+    const target = parseInt(el.dataset.target, 10);
+    const suffix = el.dataset.suffix || '';
+    const duration = 1700;
+    const start = performance.now();
+
+    const tick = (now) => {
+      const p = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.floor(target * eased) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
+  const counterObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        runCounter(entry.target);
+        counterObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.stat-num[data-target]').forEach(el => counterObs.observe(el));
+
+  const backBtn = document.getElementById('back-top');
+  const progressBar = document.querySelector('.scroll-progress span');
+  const nav = document.getElementById('nav');
+
+  const onScroll = () => {
+    const y = window.scrollY || document.documentElement.scrollTop;
+    if (backBtn) backBtn.classList.toggle('show', y > 500);
+
+    if (nav) {
+      nav.style.background = y > 24 ? 'rgba(5,8,22,.74)' : 'rgba(5,8,22,.52)';
+      nav.style.borderBottomColor = y > 24 ? 'rgba(255,255,255,.12)' : 'rgba(255,255,255,.08)';
+    }
+
+    if (progressBar) {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? (y / docHeight) * 100 : 0;
+      progressBar.style.width = pct + '%';
+    }
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  if (backBtn) {
+    backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
+})();
+</script>
+
+
+</body>
+</html>
